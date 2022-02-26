@@ -197,18 +197,10 @@ func Merge(sets []*ScoreSet, weights []float64) *ScoreSet {
 
 	var merged ScoreSet
 	merged.columnNames = sets[0].columnNames
-	merged.rowNames = sets[0].rowNames
-	for _, rowWeight := range sets[0].rowWeights {
-		if weights == nil {
-			merged.rowWeights = append(merged.rowWeights, rowWeight/float64(len(sets)))
-		} else {
-			merged.rowWeights = append(merged.rowWeights, rowWeight*weights[0])
-		}
-	}
-	merged.scores = sets[0].scores
 
-	for i := 1; i < len(sets); i++ {
-		merged.rowNames = append(merged.rowNames, sets[i].rowNames...)
+	columns := sets[0].columnNames
+	var rows int
+	for i := 0; i < len(sets); i++ {
 		for _, rowWeight := range sets[i].rowWeights {
 			if weights == nil {
 				merged.rowWeights = append(merged.rowWeights, rowWeight/float64(len(sets)))
@@ -217,16 +209,27 @@ func Merge(sets []*ScoreSet, weights []float64) *ScoreSet {
 			}
 		}
 
-		a := merged.scores
-		ra, ca := a.Dims()
-		b := sets[i].scores
-		rb, cb := b.Dims()
-		if ca != cb {
-			panic("merge column count mismatch")
+		r, c := sets[i].scores.Dims()
+		if c != len(columns) {
+			panic("tnarg")
 		}
 
-		merged.scores = mat.NewDense(ra+rb, ca, nil)
-		merged.scores.Stack(a, b)
+		rows += r
+	}
+
+	merged.scores = mat.NewDense(rows, len(columns), nil)
+
+	rout := 0
+	for i := 0; i < len(sets); i++ {
+		s := sets[i].scores
+		r, _ := s.Dims()
+
+		for j := 0; j < r; j++ {
+			merged.rowNames = append(merged.rowNames, sets[i].rowNames[j])
+			row := mat.Row(nil, j, s)
+			merged.scores.SetRow(rout, row)
+			rout++
+		}
 	}
 
 	return &merged
@@ -376,7 +379,7 @@ func ScoreLivability(input Input) *ScoreSet {
 		return city.Livability.Running
 	})
 
-	walkscore := NewScoreSet("/Livability/Running", input.CandidateCities, BIGGER, func(city City) float64 {
+	walkscore := NewScoreSet("/Livability/WalkScore", input.CandidateCities, BIGGER, func(city City) float64 {
 		return city.Livability.WalkScore
 	})
 
