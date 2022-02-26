@@ -1,0 +1,379 @@
+annual_income: 300000   # Example data, $300K
+annual_expenses: 100000 # Example data, $100K
+home_equity: 1000000    # Example data, $1M
+candidate_cities:
+- name: Portland
+  education:
+    #name: Grant High School
+    #url: https://www.usnews.com/education/best-high-schools/oregon/districts/portland-public-schools/grant-high-school-16605
+    #math: 0.58
+    #reading: 0.85
+    #graduation: 0.94
+    #college: 0.48
+    name: Madison High School
+    url: https://www.usnews.com/education/best-high-schools/oregon/districts/portland-public-schools/madison-high-school-16609
+    usnews: 6464
+    math: 0.29
+    reading: 0.52
+    graduation: 0.79
+    college: 0.334
+  real_estate:
+    sample: https://www.redfin.com/OR/Portland/2831-NE-45th-Ave-97213/home/26438984
+    market: 1435464
+    assessed: 1356250
+  livability:
+    politics: 0.90
+    culture: 0.5
+    running: 0.5
+    walk_score: 81.0
+    miles_to_airport: 5.0
+  taxes:
+    property: 0.0104
+    sales: 0.0
+    income: 0.120
+  crime:
+    violent: 40.0
+    property: 72.3
+  climate:
+    sunny_days: 141.0
+    rain_inches: 42.0
+    snow_inches: 1.5
+  family:
+    miles_to_margaret: 29.2
+    miles_to_nich: 186.0
+    miles_to_peggy: 13.1
+    miles_to_ryan: 9.8
+    multiple_suites: 0.0
+
+- name: Lake Oswego
+  education:
+    name: Lake Oswego Senior High School
+    url: https://www.usnews.com/education/best-high-schools/oregon/districts/lake-oswego-school-district-7j/lake-oswego-senior-high-school-16531
+    usnews: 773
+    math: 0.59
+    reading: 0.81
+    graduation: 0.94
+    college: 0.560
+  real_estate:
+    sample: https://www.redfin.com/OR/Lake-Oswego/858-10th-St-97034/home/25819560
+    market: 1650000
+    assessed: 1275000
+  livability:
+    politics: 0.68
+    culture: 0.5
+    running: 0.5
+    walk_score: 47.0
+    miles_to_airport: 19.1
+  taxes:
+    property: 0.0102
+    sales: 0.0
+    income: 0.094
+  crime:
+    violent: 8.4
+    property: 22.0
+  climate:
+    sunny_days: 141.0
+    rain_inches: 42.5
+    snow_inches: 1.5
+  family:
+    miles_to_margaret: 35.2
+    miles_to_nich: 192.0
+    miles_to_peggy: 4.9
+    miles_to_ryan: 4.1
+    multiple_suites: 0.5
+
+- name: West Linn
+  education:
+    name: West Linn High School
+    url: https://www.usnews.com/education/best-high-schools/oregon/districts/west-linn-wilsonville-school-district-3j/west-linn-high-school-16684
+    usnews: 282
+    math: 0.64
+    reading: 0.88
+    graduation: 0.99
+    college: 0.677
+  real_estate:
+    sample: https://www.redfin.com/OR/West-Linn/2688-Pimlico-Dr-97068/home/25983832
+    market: 1500000
+    assessed: 1111000
+  livability:
+    politics: 0.64
+    culture: 0.2
+    running: 0.3
+    walk_score: 24.0
+    miles_to_airport: 19.8
+  taxes:
+    property: 0.0102
+    sales: 0.0
+    income: 0.094
+  crime:
+    violent: 6.8
+    property: 20.0
+  climate:
+    sunny_days: 144.0
+    rain_inches: 45.0
+    snow_inches: 1.0
+  family:
+    miles_to_margaret: 41.2
+    miles_to_nich: 198.0
+    miles_to_peggy: 14.7
+    miles_to_ryan: 10.0
+    multiple_suites: 0.5
+
+- name: Bend
+  education:
+    name: Summit High School
+    url: https://www.usnews.com/education/best-high-schools/oregon/districts/bend-lapine-administrative-school-district-1/summit-high-school-16417
+    usnews: 7153
+    math: 0.31
+    reading: 0.44
+    graduation: 0.90
+    college: 0.546
+  real_estate:
+    sample: https://www.redfin.com/OR/Bend/19196-Cartwright-Ct-97702/home/165705741 #https://www.redfin.com/OR/Bend/3493-NW-Bryce-Canyon-Ln-97701/home/77534207
+    market: 1649750
+    assessed: 1450000
+  livability:
+    politics: 0.50
+    culture: 0.4
+    running: 0.9
+    walk_score: 1.0
+    miles_to_airport: 20.5
+  taxes:
+    property: 0.0085
+    sales: 0.0
+    income: 0.094
+  crime:
+    violent: 12.2
+    property: 37.2
+  climate:
+    sunny_days: 162
+    rain_inches: 11.3
+    snow_inches: 20.5
+  family:
+    miles_to_margaret: 185.0
+    miles_to_nich: 342.0
+    miles_to_peggy: 170.0
+    miles_to_ryan: 173.0
+    multiple_suites: 0.9
+
+- name: Ashland
+  education:
+    name: Ashland High School
+    url: https://www.usnews.com/education/best-high-schools/oregon/districts/ashland-school-district-5/ashland-high-school-16392
+    usnews: 1584
+    math: 0.53
+    reading: 0.82
+    graduation: 0.89
+    college: 32.5
+  real_estate:
+    sample: https://www.redfin.com/OR/Ashland/120-Westwood-St-97520/home/131262634
+    market: 1399000
+    assessed: 1300000
+  livability:
+    politics: 0.70
+    culture: 0.7
+    running: 0.6
+    walk_score: 9.0
+    miles_to_airport: 16.1
+  taxes:
+    property: 0.0095
+    sales: 0.0
+    income: 0.094
+  crime:
+    violent: 10.1
+    property: 48.4
+  climate:
+    sunny_days: 198.0
+    rain_inches: 22.3
+    snow_inches: 3.7
+  family:
+    miles_to_margaret: 312.0
+    miles_to_nich: 469.0
+    miles_to_peggy: 281.0
+    miles_to_ryan: 281.0
+    multiple_suites: 0.9
+
+- name: Camas
+  education:
+    name: Camas High School
+    url: https://www.usnews.com/education/best-high-schools/washington/districts/camas-school-district/camas-high-school-20763
+    usnews: 1660
+    math: 0.67
+    reading: 0.88
+    graduation: 0.93
+    college: 0.469
+  real_estate:
+    sample: https://www.redfin.com/WA/Camas/3120-SW-6th-Ave-98607/home/144772084
+    market: 1435000
+    assessed: 1200000
+  livability:
+    politics: 0.59
+    culture: 0.2
+    running: 0.3
+    walk_score: 3.0
+    miles_to_airport: 12.4
+  taxes:
+    property: 0.0102
+    sales: 0.065
+    income: 0.0
+  crime:
+    violent: 8.1
+    property: 24.8
+  climate:
+    sunny_days: 143.0
+    rain_inches: 61.1
+    snow_inches: 3.5
+  family:
+    miles_to_margaret: 35.2
+    miles_to_nich: 189.0
+    miles_to_peggy: 31.3
+    miles_to_ryan: 27.2
+    multiple_suites: 0.9
+
+- name: Bellevue
+  education:
+    name: Interlake Senior High School
+    url: https://www.usnews.com/education/best-high-schools/washington/districts/bellevue-school-district/interlake-senior-high-school-20733
+    usnews: 463
+    math: 0.72
+    reading: 0.88
+    graduation: 0.92
+    college: 0.681
+  real_estate:
+    sample: https://www.redfin.com/WA/Bellevue/1014-185th-Ave-NE-98008/home/502299
+    market: 2335000
+    assessed: 2100000
+  livability:
+    politics: 0.73
+    culture: 0.83
+    running: 0.2
+    walk_score: 4.0
+    miles_to_airport: 20.3
+  taxes:
+    property: 0.0093
+    sales: 0.065
+    income: 0.0
+  crime:
+    violent: 9.6
+    property: 45.6
+  climate:
+    sunny_days: 155.0
+    rain_inches: 40.7
+    snow_inches: 3.7
+  family:
+    miles_to_margaret: 164.0
+    miles_to_nich: 19.5
+    miles_to_peggy: 195.0
+    miles_to_ryan: 185.0
+    multiple_suites: 0.2
+
+- name: Redmond
+  education:
+    name: Redmond High
+    url: https://www.usnews.com/education/best-high-schools/washington/districts/lake-washington-school-district/redmond-high-20956
+    usnew: 806
+    math: 0.76
+    reading: 0.89
+    graduation: 0.93
+    college: 0.532
+  real_estate:
+    sample: https://www.redfin.com/WA/Redmond/23760-NE-107th-Ln-98053/home/39904534
+    market: 2600000
+    assessed: 2300000
+  livability:
+    politics: 0.81
+    culture: 0.6
+    running: 0.2
+    walk_score: 20.0
+    miles_to_airport: 29.4
+  taxes:
+    property: 0.0093
+    sales: 0.065
+    income: 0.0
+  crime:
+    violent: 10.6
+    property: 44.2
+  climate:
+    sunny_days: 155.0
+    rain_inches: 40.7
+    snow_inches: 3.7
+  family:
+    miles_to_margaret: 165.0
+    miles_to_nich: 24.3
+    miles_to_peggy: 195.0
+    miles_to_ryan: 191.0
+    multiple_suites: 0.2
+
+- name: Bainbridge
+  education:
+    name: Bainbridge High School
+    url: https://www.usnews.com/education/best-high-schools/washington/districts/bainbridge-island-school-district/bainbridge-high-school-20724
+    usnews: 343
+    math: 0.80
+    reading: 0.96
+    graduation: 0.95
+    college: 0.677
+  real_estate:
+    sample: https://www.redfin.com/WA/Bainbridge-Island/9817-NE-Rose-Trl-Ln-98110/home/2296891
+    market: 2400000
+    assessed: 2175000
+  livability:
+    politics: 0.83
+    culture: 0.4
+    running: 0.5
+    walk_score: 0.0
+    miles_to_airport: 70.0
+  taxes:
+    property: 0.0098
+    sales: 0.065
+    income: 0.0
+  crime:
+    violent:
+    property:
+  climate:
+    sunny_days: 150.0
+    rain_inches: 44.0
+    snow_inches: 4.0
+  family:
+    miles_to_margaret: 178.0
+    miles_to_nich: 50.0
+    miles_to_peggy: 208.0
+    miles_to_ryan: 204.0
+    multiple_suites: 0.2
+
+- name: Pleasanton
+  education:
+    name: Foothill High
+    url: https://www.usnews.com/education/best-high-schools/california/districts/pleasanton-unified-school-district/foothill-high-1536
+    usnews: 451
+    math: 0.69
+    reading: 0.85
+    graduation: 0.98
+    college: 0.656
+  real_estate:
+    sample: https://www.redfin.com/CA/Pleasanton/3202-Curtis-Cir-94588/home/1198150
+    market: 2550000
+    assessed: 2380000
+  livability:
+    politics: 0.65
+    culture: 0.5
+    running: 0.1
+    walk_score: 36.0
+    miles_to_airport: 20.2
+  taxes:
+    property: 0.0078
+    sales: 0.0725
+    income: 0.0840
+  crime:
+    violent: 10.0
+    property: 22.2
+  climate:
+    sunny_days: 264.0
+    rain_inches: 18.7
+    snow_inches: 0.0
+  family:
+    miles_to_margaret: 665.0
+    miles_to_nich: 822.0
+    miles_to_peggy: 631.0
+    miles_to_ryan: 633.0
+    multiple_suites: 0.0
